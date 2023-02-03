@@ -1,1 +1,16 @@
 // Заголовки, общие БЄМ блоки и проче...
+.button {
+background: #000000;
+border: 1px solid #000000;
+border-radius: 8px;
+padding: 17.5px 20px;
+color: white;
+}
+
+.title {
+	@include adaptiveValue("font-size", 48, 32,1920,375,1);
+	line-height: 56px;
+	@media (max-width:$mobile){
+		 line-height: 1.4; 
+	}
+}
