@@ -1,9 +1,158 @@
 //====================================================================================================
+.header {
+
+	// .header__container
+
+	&__container {
+	}
+
+	// .header__body-top
+
+	&__body-top {
+		display: flex;
+		justify-content: space-between;
+		//flex-wrap: wrap;
+		align-items: center;
+	}
+}
+.header-top {
+
+	// .header-top__logoandlocation
+
+	&__logoandlocation {
+		flex: 0 0 percent(329,1520);
+		display: flex;
+		@include adaptiveValue("gap", 54, 10,1920,375,1);
+		align-items: center;
+	}
+
+	// .header-top__logo
+
+	&__logo {
+		flex: 0 0 percent(156,329);
+		padding-bottom: percent(34,329);;
+	}
+
+	// .header-top__location
+
+	&__location {
+		padding-left: rem(30);
+		background: url('@img/header/location.svg') left 50% no-repeat;
+	}
+
+	// .header-top__button
+
+	&__button {
+		font-weight: 500;
+		font-size: rem(15);
+		line-height: math.div(20 , 15);
+		color: $mainDark;
+	}
+
+	// .header-top__menu
+
+	&__menu {
+	}
+
+	// .header-top__right
+
+	&__right {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		gap: 20px;
+	}
+
+	// .header-top__phone
+
+	&__phone {
+		display: inline-block;
+	}
+
+	// .header-top__phonelink
+
+	&__phonelink {
+		span{
+			font-weight: 500;
+			font-size: 20px;
+			line-height: math.div(23 , 20);
+			@media (max-width:$mobile){
+				 display: none; 
+			}
+		}
+		img {
+			display: none;
+			@media (max-width:$mobile){
+				 display: block; 
+			}
+		}
+	}
+
+	// .header-top__phonetext
+
+	&__phonetext {
+		font-size: rem(11);
+		line-height: math.div(12 , 11);
+		color: #555;
+		@media (max-width:$mobile){
+			 display: none; 
+		}
+	}
+}
+
+.menu {
+
+	// .menu__icon
+
+	&__icon {
+	}
+
+	// .menu__body
+
+	&__body {
+	}
+
+	// .menu__list
+
+	&__list {
+		display: flex;
+		align-items: center;
+		flex-wrap: wrap;
+	}
+
+	// .menu__item
+
+	&__item {
+		display: flex;
+		align-items: center;
+		gap: 3px;
+		&:not(:last-child) {
+			margin-right:rem(20);
+		}
+	}
+
+	// .menu__link
+
+	&__link {
+		font-size: rem(15);
+		line-height: math.div(18 , 15);
+		color: $mainDark;
+	}
+
+	// .menu__link-arrow
+
+	&__link-arrow {
+		display: flex;
+		align-items: center;
+	}
+}
+
+
 
 //====================================================================================================
 
 //Burger
-/*
+
 .icon-menu {
 	display: none;
 	@media (max-width: $mobile) {
@@ -51,4 +200,4 @@
 		}
 	}
 }
-*/
+

@@ -3,13 +3,23 @@
 background: #000000;
 border: 1px solid #000000;
 border-radius: 8px;
-padding: 17.5px 20px;
+//padding: 17.5px 20px;
+@include adaptiveValue("padding-left", 20, 12,1920,375,1);
+@include adaptiveValue("padding-right", 20, 12,1920,375,1);
+@include adaptiveValue("padding-top", 17.5, 10,1920,375,1);
+@include adaptiveValue("padding-bottom", 17.5, 10,1920,375,1);
 color: white;
+}
+
+.button-white {
+	padding: 10px 12px;
+	border: 1px solid #000000;
+	border-radius: 8px;
 }
 
 .title {
 	@include adaptiveValue("font-size", 48, 32,1920,375,1);
-	line-height: 56px;
+	line-height: math.div(56 , 48);
 	@media (max-width:$mobile){
 		 line-height: 1.4; 
 	}
