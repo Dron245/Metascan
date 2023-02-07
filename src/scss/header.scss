@@ -402,8 +402,8 @@
 		display: block;
 		position: relative;
 		//width: rem(30);
-		flex: 0 0 rem(30);
-		height: rem(18);
+		flex: 0 0 rem(24);
+		height: rem(24);
 		cursor: pointer;
 		z-index: 5;
 		span,
@@ -414,8 +414,9 @@
 			right: 0;
 			position: absolute;
 			width: 100%;
-			height: rem(2);
-			background-color: #000;
+			height: rem(3);
+			background: #FFC900;
+			border-radius: 7px;
 		}
 		&::before {
 			top: 0;
@@ -434,7 +435,7 @@
 			&::after {
 			}
 			&::before {
-				top: calc(50% - rem(1));
+				top: calc(50% - rem(2));
 				transform: rotate(-45deg);
 			}
 			&::after {
