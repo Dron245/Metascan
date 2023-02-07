@@ -1,46 +1,79 @@
 <header class="header">
-	<div class="header__container">
-		<div class="header__body-top header-top">
-			<div class="header-top__logoandlocation">
-				<div class="header-top__logo -ibg">
-					<img src="@img/header/logo.svg" alt="logo">
+	<div class="header__body-top header-top">
+		<div class="header__container">
+				<div class="header__top-padding">
+					<button type="button" class="menu__icon icon-menu"><span></span></button>
+					<div class="header-top__logoandlocation">
+						<a href="#" class="header-top__logo -ibg">
+							<img src="@img/header/logo.svg" alt="logo">
+						</a>
+						<div data-da=".header-bottom__wrapper, 768, 0" class="header-top__location">
+							<button type="submit" class="header-top__button header-top__button_city">Йошкар-Ола</button>
+						</div>
+					</div>
+					<div class="header-top__menu menu">
+						<nav class="menu__body">
+							<ul class="menu__list">
+								<li class="menu__item menu__item_first">
+									<a href="#" class="menu__link">Продукция</a>
+									<button type="button" class="menu__link-arrow">
+										<img src="@img/header/arrow-down.svg" alt="">
+									</button>
+								</li>
+								<li class="menu__item">
+									<a href="#" class="menu__link">О компании</a>
+									<button type="button" class="menu__link-arrow">
+										<img src="@img/header/arrow-down.svg" alt="">
+									</button>
+								</li>
+								<li class="menu__item"><a href="#" class="menu__link">Блог</a></li>
+								<li class="menu__item"><a href="#" class="menu__link">Частые вопросы</a></li>
+								<li class="menu__item"><a href="#" class="menu__link">Сервис и гарантия</a></li>
+								<li class="menu__item"><a href="#" class="menu__link">Доставка и оплата</a></li>
+								<li class="menu__item"><a href="#" class="menu__link">Диллерам</a></li>
+								<li class="menu__item"><a href="#" class="menu__link">Контакты</a></li>
+							</ul>
+						</nav>
+					</div>
+					<div class="header-top__right">
+						<div class="header-top__phone">
+							<a class="header-top__phonelink" href="tel:+78004440027">
+								<span>8 800 444-00-27</span>
+								<img src="@img/header/phone.svg" alt="">
+							</a>
+							<p class="header-top__phonetext">бесплатно по России</p>
+						</div>
+						<button type="submit" class="header-top__button header-top__button_phone button-white">Заказать звонок</button>
+					</div>
 				</div>
-				<div class="header-top__location">
-					<button type="submit" class="header-top__button">Йошкар-Ола</button>
-				</div>
-			</div>
-			<div class="header-top__menu menu">
-				<button type="button" class="menu__icon icon-menu"><span></span></button>
-				<nav class="menu__body">
-					<ul class="menu__list">
-						<li class="menu__item">
-							<a href="#" class="menu__link">О компании</a>
-							<button type="button" class="menu__link-arrow">
-								<img src="@img/header/arrow-down.svg" alt="">
-							</button>
-						</li>
-						<li class="menu__item"><a href="#" class="menu__link">Блог</a></li>
-						<li class="menu__item"><a href="#" class="menu__link">Частые вопросы</a></li>
-						<li class="menu__item"><a href="#" class="menu__link">Сервис и гарантия</a></li>
-						<li class="menu__item"><a href="#" class="menu__link">Доставка и оплата</a></li>
-						<li class="menu__item"><a href="#" class="menu__link">Диллерам</a></li>
-						<li class="menu__item"><a href="#" class="menu__link">Контакты</a></li>
-					</ul>
-				</nav>
-			</div>
-			<div class="header-top__right">
-				<div class="header-top__phone">
-					<a class="header-top__phonelink" href="tel:+78004440027">
-						<span>8 800 444-00-27</span>
-						<img src="@img/header/phone.svg" alt="">
-					</a>
-					<p class="header-top__phonetext">бесплатно по России</p>
-				</div>
-				<button type="submit" class="header-top__button button-white">Заказать звонок</button>
-			</div>
 		</div>
-		<div class="header__body-top header-bottom">
-			
+		</div>
+	<div class="header__body-bottom header-bottom">
+		<div class="header-bottom__wrapper __container">
+			<nav data-da=".menu__item_first, 768, 2" class="header-bottom__navigation">
+				<ul class="header-bottom__list">
+					<li class="header-bottom__item"><a href="#" class="header-bottom__link">Металлоискатели</a></li>
+					<li class="header-bottom__item"><a href="#" class="header-bottom__link">Оборудование для безопасности</a></li>
+					<li class="header-bottom__item"><a href="#" class="header-bottom__link">Тактические Металлоискатели</a></li>
+					<li class="header-bottom__item"><a href="#" class="header-bottom__link">Очисктка воздуха</a></li>
+					<li class="header-bottom__item"><a href="#" class="header-bottom__link">Дополнения и аксессуары</a></li>
+				</ul>
+			</nav>
+			<div class="header-bottom__actions actions-header-bottom">
+				<div class="actions-header-bottom__user">
+					<div class="actions-header-bottom__img">
+						<img src="@img/header/entry.svg" alt="entry">
+					</div>
+					<p class="actions-header-bottom__text actions-header-bottom__text_one ">Вход</p>
+					<p class="actions-header-bottom__text">Войти</p>
+				</div>
+				<div class="actions-header-bottom__cart">
+					<div data-da=".header-top__phone, 768, 1" class="actions-header-bottom__img">
+						<img src="@img/header/cart.svg" alt="cart">
+						<span class="actions-header-bottom__quantity">2</span>
+					</div>
+				</div>
+			</div>
 		</div>
 	</div>
 </header>
