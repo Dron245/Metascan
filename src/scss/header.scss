@@ -323,13 +323,44 @@
 		flex-wrap: wrap;
 		@include adaptiveValue("column-gap", 40, 10,1920,375,1);
 		row-gap: rem(10);
+		position: relative;
 	}
+
+	
 
 	// .header-bottom__item
 
 	&__item {
+		position: relative;
 	}
 
+	&__sublist {
+		position: absolute;
+		width: auto;
+		top: 100%;
+		left: 0;
+		border-radius: 8px;
+		padding: 20px 5px;
+		visibility: hidden;
+		background: #CCCCCC;
+		.header-bottom__item:hover & {
+			visibility: visible;
+		}
+	}
+
+	&__subitem {
+		&:not(:last-child) {
+			margin-bottom:rem(20)
+		}
+	}
+
+	&__sublink {
+		white-space: nowrap;
+		transition: color 0.3s;
+		&:hover{
+			color: #ECBA00;
+		}
+	}
 	// .header-bottom__link
 
 	&__link {
