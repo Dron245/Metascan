@@ -372,15 +372,22 @@
 		position: absolute;
 		width: auto;
 		top: 100%;
+		transform: translateY(20%);
 		left: 0;
 		border-radius: 8px;
 		padding: 20px 5px;
 		visibility: hidden;
 		background: #f4f4f4;
-		&._sub-menu-open {
+		transition: transform 0.3s;
+		.header-bottom__item:hover & {
+			visibility: visible;
+			transform: translateY(10%);
+		}
+		
+		@media (max-width:$mobile){
+			&._sub-menu-open {
 			visibility: visible;
 		 }
-		@media (max-width:$mobile){
 			 position: fixed;
 			 overflow: auto;
 			 height: 100%;
@@ -398,8 +405,11 @@
 	}
 
 	&__subitem {
+		padding: 0px 10px;
+		
 		&:not(:last-child) {
-			//margin-bottom:rem(20)
+			margin-bottom:rem(20);
+			
 		}
 		@media (max-width:$mobile){
 			border-top: 1px solid #DBDBDB;
