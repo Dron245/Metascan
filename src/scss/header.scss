@@ -303,6 +303,9 @@
 
 	&__body-bottom {
 		padding: rem(20) 0px;
+		@media (min-width:$mobile){
+			 padding-bottom: 0; 
+		}
 		@media (max-width:$mobile){
 			box-shadow: inset 0px 4px 10px -4px rgb(0 0 0 / 10%);
 			 position: relative;
@@ -362,9 +365,11 @@
 
 	&__item {
 		position: relative;
+		@media (min-width:$mobile){
+			 padding-bottom: rem(20); 
+		}
 		@media (max-width:$mobile){
 			 width: 100%;
-			 
 		}
 	}
 
@@ -373,7 +378,7 @@
 			position: absolute;
 			width: auto;
 			top: 100%;
-			transform: translateY(20%);
+			transform: translateY(10%);
 			left: 0;
 			border-radius: 8px;
 		}		
@@ -383,7 +388,7 @@
 		transition: transform 0.3s;
 		.header-bottom__item:hover & {
 			visibility: visible;
-			transform: translateY(10%);
+			transform: translateY(0%);
 		}
 		
 		@media (max-width:$mobile){
@@ -405,18 +410,60 @@
 		}
 	}
 
+	&__subsublist {
+		@media (min-width:$mobile){
+			position: absolute;
+			width: auto;
+			top: 0;
+			transform: translateY(10%);
+			left: 98%;
+			border-radius: 8px;
+		}		
+		padding: 20px 5px;
+		visibility: hidden;
+		background: #f4f4f4;
+		transition: transform 0.3s;
+		.header-bottom__subitem_in:hover & {
+			visibility: visible;
+			transform: translateY(0%);
+		}
+		
+		@media (max-width:$mobile){
+			&._subsub-menu-open {
+			visibility: visible;
+		 }
+			 position: fixed;
+			 overflow: auto;
+			 height: 100%;
+			 width: 100%;
+			 top: 64px;
+			 left: -100%;
+			 transition: left 0.3s;
+		.subsub-menu-open & {
+			left: 0;
+			z-index: 12;
+			padding: 40px 20px;
+		}
+		}
+	}
+
 	&__subitem {
 		padding: 0px 10px;
-		
-		&:not(:last-child) {
-			//margin-bottom:rem(20);
-			
+		@media (min-width:$mobile){
+			 &:not(:last-child) {
+				margin-bottom:rem(20);
+			 } 
 		}
 		@media (max-width:$mobile){
 			border-top: 1px solid #DBDBDB;
 			padding: 20px 0px;
 			&:last-child{
 				border-bottom: 1px solid #DBDBDB;
+			}
+		}
+		&_in {
+			@media (min-width:$mobile){
+				 position: relative; 
 			}
 		}
 	}
@@ -434,6 +481,23 @@
 	}
 
 	&__back {
+		display: none;
+		@media (max-width:$mobile){
+			 display: flex;
+			 align-items: center;
+			 margin-bottom: rem(30);
+			 
+			 font-weight: 500;
+			 font-size: rem(16);
+			 line-height: math.div(19 , 16);
+			 img {
+				transform: rotate(90deg);
+				margin-right: rem(10);
+			 }
+		}
+	}
+
+	&__subsubback {
 		display: none;
 		@media (max-width:$mobile){
 			 display: flex;
@@ -473,6 +537,9 @@
 	align-items: center;
 	justify-content: space-between;
 	gap: rem(20);
+	@media (min-width:$mobile){
+		 transform: translateY(-10px); 
+	}
 	@media (max-width:$mobile){
 		 gap: 0;
 		 position: relative;
