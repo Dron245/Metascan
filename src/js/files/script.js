@@ -3,12 +3,26 @@ import { isMobile } from "./functions.js";
 // Подключение списка активных модулей
 import { flsModules } from "./modules.js";
 
+
+
+
 document.addEventListener("click", documentActions);
+let citySelect = document.querySelector('.header-top__button_city')
 
 function documentActions(e) {
+	function rty(item) {
+		const qwe =document.querySelectorAll('.popup__item-city');
+		qwe.forEach(element => {
+			element.classList.remove('_popup-city-select')
+		});
+		console.log(item);
+		item.classList.add('_popup-city-select')
+	}
 	const targetElement = e.target;
 	const activeLink = document.querySelector('._sub-menu-active');
 	const activeBlock = document.querySelector('._sub-menu-open');
+	
+	let popupItems = document.querySelectorAll('.popup__item-city')
 
 	if (targetElement.closest('[data-parent]')) {
 		const subMenuId = targetElement.dataset.parent ? targetElement.dataset.parent : null;
@@ -36,12 +50,6 @@ function documentActions(e) {
 		const subsubMenuId = targetElement.dataset.subsubparent ? targetElement.dataset.subsubparent : null;
 		const subsubMenu = document.querySelector(`[data-subsubmenu="${subsubMenuId}"]`);
 		if (subsubMenu) {
-			console.log(subsubMenu);
-			// if (activeLink && activeLink !== targetElement) {
-			// 	activeLink.classList.remove('_sub-menu-active');
-			// 	activeBlock.classList.remove('_sub-menu-open');
-			// 	document.documentElement.classList.remove('sub-menu-open');
-			// }
 			document.documentElement.classList.toggle('subsub-menu-open');
 			targetElement.classList.toggle('_subsub-menu-active');
 			subsubMenu.classList.toggle('_subsub-menu-open');
@@ -49,13 +57,6 @@ function documentActions(e) {
 
 		}
 	}
-
-	// if (activeBlock && targetElement !== activeBlock) {
-	// 	activeLink.classList.remove('_sub-menu-active');
-	// 	activeBlock.classList.remove('_sub-menu-open');
-	// 	document.documentElement.classList.remove('sub-menu-open');
-	// }
-
 	if(targetElement.closest('.header-bottom__back')){
 		document.documentElement.classList.remove('sub-menu-open');
 		document.querySelector('._sub-menu-active') ? document.querySelector('._sub-menu-active').classList.remove('_sub-menu-active') : null;
@@ -68,5 +69,11 @@ function documentActions(e) {
 		document.querySelector('._subsub-menu-active') ? document.querySelector('._subsub-menu-active').classList.remove('_subsub-menu-active') : null;
 		document.querySelector('._subsub-menu-open') ? document.querySelector('._subsub-menu-open').classList.remove('_subsub-menu-open') : null;
 		e.preventDefault();
+	}
+
+	if(targetElement.closest('.popup__item-city')){
+		console.log(this);
+		rty(this)
+		citySelect.innerHTML = targetElement.innerText
 	}
 }

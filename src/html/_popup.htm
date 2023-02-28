@@ -1,10 +1,25 @@
-<!-- <div id="popup" aria-hidden="true" class="popup">
+ <div id="popup" aria-hidden="true" class="popup">
 	<div class="popup__wrapper">
 		<div class="popup__content">
-			<button data-close type="button" class="popup__close">Закрыть</button>
-			<div class="popup__text">
-				Text
+			<div class="popup__top">
+				<div class="popup__title"><h3>Выбор города</h3></div>
+				<button data-close type="button" class="popup__close">
+				<img src="@img/header/popup_close.svg" alt="">
+			</button>
 			</div>
+			<div class="popup__search">
+				<form action="#" class="popup__form">
+					<input autocomplete="off" type="text" name="form[]" data-error="Ошибка" placeholder="Найти город" class="popup__input">
+					<button class="popup__button">
+						<img src="@img/header/search.svg" alt="">
+					</button>
+				</form>
+			</div>
+			<ul class="popup__list">
+				<li class="popup__item "><button type="button" class="popup__item-city">Йошкар-Ола</button></li>
+				<li class="popup__item"><button type="button" class="popup__item-city">Москва</button></li>
+				<li class="popup__item"><button type="button" class="popup__item-city">Санкт-Петербург</button></li>
+			</ul>
 		</div>
 	</div>
-</div> -->
+</div>

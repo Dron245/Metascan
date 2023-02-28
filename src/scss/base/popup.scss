@@ -24,7 +24,86 @@ body::after {
 	transition: visibility 0.8s ease 0s;
 	visibility: hidden;
 	pointer-events: none;
+	
+	&__top {
+		display: flex;
+		justify-content: space-between;
+		margin-bottom: rem(22);
+	}
+	&__title {
+		font-weight: 500;
+		font-size: rem(22);
+		line-height: math.div(26 , 22);
+	}
+
+		// .popup__close
+
+	&__close {
+	}
+
+		// .popup__search
+
+	&__search {
+		margin-bottom: rem(20);
+	}
+
+		// .popup__form
+
+	&__form {
+		display: flex;
+		padding: 18.5px 16px;
+		border: 1px solid #D1D1D1;
+		border-radius: 8px;
+	}
+
+		// .popup__input
+
+	&__input {
+		flex: 1 1 auto;
+	}
+
+		// .popup__button
+
+	&__button {
+	}
+
+		// .popup__list
+
+	&__list {
+	}
+
+		// .popup__item
+
+	&__item {
+		display: flex;
+		&:not(:last-child) {
+			margin-bottom:rem(15)
+		}
+	}
+
+		// .popup__item-city
+
+	&__item-city {
+		font-weight: 300;
+		font-size: rem(16);
+		line-height: math.div(19 , 16);
+		flex: 1 0 auto;
+		text-align: left;
+		&._popup-city-select {
+			font-weight: 500;
+			display: flex;
+			align-items: center;
+			gap: rem(30);
+			&::after{
+				content:'';
+				flex: 0 0 rem(10);
+				height: rem(10);
+				background: url('@img/header/check.svg') center center no-repeat;
+			}
+		}
+	}
 }
+
 .popup_show {
 	z-index: 150;
 	visibility: visible;
@@ -47,14 +126,15 @@ body::after {
 	align-items: center;
 }
 .popup__content {
+	
 	visibility: hidden;
 	transform: scale(0);
 	transition: transform 0.3s ease 0s;
-	background-color: #eee;
-	padding: 20px;
+	background-color: #fff;
+	padding: 20px 30px;
 	width: 100%;
-	max-width: 900px;
-	border-radius: 20px;
+	max-width: 347px;
+	border-radius: 16px;
 	.lock & {
 		visibility: visible;
 	}
