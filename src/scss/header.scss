@@ -255,7 +255,6 @@
 				}
 				background: #FFC900;
 				border-radius: 50px;
-
 			}
 			 //gap: 0;
 		}
@@ -457,6 +456,9 @@
 		@media (max-width:$mobile){
 			border-top: 1px solid #DBDBDB;
 			padding: 20px 0px;
+			&:first-of-type {
+				border-top: 0;
+			}
 			&:last-child{
 				border-bottom: 1px solid #DBDBDB;
 			}
@@ -485,8 +487,10 @@
 		@media (max-width:$mobile){
 			 display: flex;
 			 align-items: center;
-			 margin-bottom: rem(30);
-			 
+			 padding: 19.5px 10px;
+			 width: 100%;
+			 background: #FFC900;
+			border-radius: 50px;
 			 font-weight: 500;
 			 font-size: rem(16);
 			 line-height: math.div(19 , 16);
@@ -502,8 +506,10 @@
 		@media (max-width:$mobile){
 			 display: flex;
 			 align-items: center;
-			 margin-bottom: rem(30);
-			 
+			 width: 100%;
+			 background: #FFC900;
+				border-radius: 50px;
+				padding: 19.5px 10px;
 			 font-weight: 500;
 			 font-size: rem(16);
 			 line-height: math.div(19 , 16);

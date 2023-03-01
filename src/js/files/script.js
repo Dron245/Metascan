@@ -3,27 +3,15 @@ import { isMobile } from "./functions.js";
 // Подключение списка активных модулей
 import { flsModules } from "./modules.js";
 
-
-
-
 document.addEventListener("click", documentActions);
 let citySelect = document.querySelector('.header-top__button_city')
 
 function documentActions(e) {
-	function rty(item) {
-		const qwe =document.querySelectorAll('.popup__item-city');
-		qwe.forEach(element => {
-			element.classList.remove('_popup-city-select')
-		});
-		console.log(item);
-		item.classList.add('_popup-city-select')
-	}
+	
 	const targetElement = e.target;
 	const activeLink = document.querySelector('._sub-menu-active');
 	const activeBlock = document.querySelector('._sub-menu-open');
 	
-	let popupItems = document.querySelectorAll('.popup__item-city')
-
 	if (targetElement.closest('[data-parent]')) {
 		const subMenuId = targetElement.dataset.parent ? targetElement.dataset.parent : null;
 		const subMenu = document.querySelector(`[data-submenu="${subMenuId}"]`);
@@ -38,7 +26,6 @@ function documentActions(e) {
 			document.documentElement.classList.toggle('sub-menu-open');
 			targetElement.classList.toggle('_sub-menu-active');
 			subMenu.classList.toggle('_sub-menu-open');
-			
 
 		} else {
 			console.log('Ой ой, нет такого подменю :(')
@@ -72,8 +59,11 @@ function documentActions(e) {
 	}
 
 	if(targetElement.closest('.popup__item-city')){
-		console.log(this);
-		rty(this)
+		const citySelectPopup =document.querySelectorAll('.popup__item-city');
+		citySelectPopup.forEach(e => {
+			e.classList.remove('_popup-city-select')
+		});
+		targetElement.classList.add('_popup-city-select')
 		citySelect.innerHTML = targetElement.innerText
 	}
 }
