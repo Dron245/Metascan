@@ -1,18 +1,21 @@
- <div id="popup" aria-hidden="true" class="popup">
+ <div id="popup01" aria-hidden="true" class="popup">
 	<div class="popup__wrapper">
 		<div class="popup__content">
 			<div class="popup__top">
 				<div class="popup__title"><h3>Выбор города</h3></div>
 				<button data-close type="button" class="popup__close">
 				<img src="@img/header/popup_close.svg" alt="">
-			</button>
+				</button>
 			</div>
 			<div class="popup__search">
 				<form action="#" class="popup__form">
-					<input autocomplete="off" type="text" name="form[]" data-error="Ошибка" placeholder="Найти город" class="popup__input">
-					<button class="popup__button">
+					<div class="popup__search-wrapper">
+						<input autocomplete="off" type="text" name="form[]" data-error="Ошибка"
+						 placeholder="Найти город" class="popup__input">
+						<button class="popup__button">
 						<img src="@img/header/search.svg" alt="">
 					</button>
+					</div>
 				</form>
 			</div>
 			<ul class="popup__list">
@@ -20,6 +23,64 @@
 				<li class="popup__item"><button type="button" class="popup__item-city">Москва</button></li>
 				<li class="popup__item"><button type="button" class="popup__item-city">Санкт-Петербург</button></li>
 			</ul>
+		</div>
+	</div>
+</div>
+
+<div id="popup02" aria-hidden="true" class="popup">
+	<div class="popup__wrapper">
+		<div class="popup__content">
+			<div class="popup__top">
+				<div class="popup__title"><h3>Вход</h3></div>
+				<button data-close type="button" class="popup__close">
+				<img src="@img/header/popup_close.svg" alt="">
+			</button>
+			</div>
+			<div class="popup__search checkbox">
+				<form action="#" class="popup__form popup__form_02">
+					<input autocomplete="off" type="text" name="form[]" data-error="Ошибка" placeholder="Ваш e-mail" class="popup__input">
+					<input autocomplete="off" type="text" name="form[]" data-error="Ошибка" placeholder="Введите пароль" class="popup__input">
+					<div class="popup__check">
+						<input class="checkbox__input" value="Запомнить меня" type="checkbox" name="Запомнить меня" id="02">
+						<label class="checkbox__label" for="02">Запомнить меня</label>
+					</div>
+					<button class="popup__button button-black" type="button">Войти</button>
+					<span class="popup__lose-pasword">Забыли пароль?</span>
+				</form>
+				<div class="popup__bottom bottom-popup">
+					<span class="bottom-popup__text">Ещё не зарегистрированы?</span>
+					<button type="button" class="button-white button-white-popup">Регистрация</button>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div id="popup03" aria-hidden="true" class="popup">
+	<div class="popup__wrapper">
+		<div class="popup__content">
+			<div class="popup__top">
+				<div class="popup__title"><h3>Заказ звонка</h3></div>
+				<button data-close type="button" class="popup__close">
+				<img src="@img/header/popup_close.svg" alt="">
+			</button>
+			</div>
+			<div class="popup__search checkbox">
+				<form action="#" class="popup__form popup__form_02">
+					<input autocomplete="off" type="text" name="form[]" data-error="Ошибка" placeholder="Как вас зовут?" class="popup__input">
+					<input autocomplete="off" type="text" name="form[]" data-error="Ошибка" placeholder="+7" class="popup__input">
+					<div class="popup__check">
+						<input class="checkbox__input" value="Запомнить меня" type="checkbox" name="Запомнить меня" id="02">
+						<label class="checkbox__label" for="02">Запомнить меня</label>
+					</div>
+					<button class="popup__button button-black" type="button">Войти</button>
+					<span class="popup__lose-pasword">Забыли пароль?</span>
+				</form>
+				<div class="popup__bottom bottom-popup">
+					<span class="bottom-popup__text">Ещё не зарегистрированы?</span>
+					<button type="button" class="button-white button-white-popup">Регистрация</button>
+				</div>
+			</div>
 		</div>
 	</div>
 </div>

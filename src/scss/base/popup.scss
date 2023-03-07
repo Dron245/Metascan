@@ -47,24 +47,49 @@ body::after {
 		margin-bottom: rem(20);
 	}
 
-		// .popup__form
-
-	&__form {
+	&__search-wrapper {
 		display: flex;
 		padding: 18.5px 16px;
 		border: 1px solid #D1D1D1;
 		border-radius: 8px;
+	}
+		// .popup__form
+
+	&__form {
+		display: flex;
+		
+		&_02 {
+			flex-direction: column;
+			gap: rem(16);
+			& .popup__input {
+				padding: 18.5px 16px;
+				border: 1px solid #D1D1D1;
+				border-radius: 8px;
+			}
+		}
 	}
 
 		// .popup__input
 
 	&__input {
 		flex: 1 1 auto;
+		//padding: 18.5px 16px;
+		//border: 1px solid #D1D1D1;
+		//border-radius: 8px;
 	}
 
+	&__check {
+		font-size: 15px;
+		line-height: math.div(18 , 15);
+	}
 		// .popup__button
 
 	&__button {
+	}
+
+	&__lose-pasword {
+		margin-top: rem(4);
+		text-align: center;
 	}
 
 		// .popup__list
@@ -103,6 +128,23 @@ body::after {
 		}
 	}
 }
+
+.bottom-popup {
+	margin-top: rem(40);
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	// .bottom-popup__text
+
+	&__text {
+		font-size: rem(13);
+		line-height: 1.4;
+	}
+}
+.button-white-popup {
+	font-size: rem(14);
+}
+
 
 .popup_show {
 	z-index: 150;
