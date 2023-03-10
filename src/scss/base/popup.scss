@@ -52,6 +52,7 @@ body::after {
 		padding: 18.5px 16px;
 		border: 1px solid #D1D1D1;
 		border-radius: 8px;
+		width: 100%;
 	}
 		// .popup__form
 
@@ -71,6 +72,16 @@ body::after {
 
 		// .popup__input
 
+	&__input-group {
+		display: flex;
+		flex-direction: column;
+		column-gap: rem(3);
+		span {
+			font-size: 14px;
+			line-height: 16px;
+		}
+	}
+	
 	&__input {
 		flex: 1 1 auto;
 		//padding: 18.5px 16px;
@@ -127,6 +138,18 @@ body::after {
 			}
 		}
 	}
+
+		// .popup__right
+
+		&__right {
+			background-color: #FFCD11;
+			
+		}
+	
+		// .popup__close
+	
+		&__close {
+		}
 }
 
 .bottom-popup {
@@ -139,6 +162,16 @@ body::after {
 	&__text {
 		font-size: rem(13);
 		line-height: 1.4;
+	}
+
+	&__politica {
+		font-size: rem(11);
+		text-align: center;
+		line-height: 1.4;
+		padding: 0px 20px;
+		a {
+			text-decoration: revert;
+		}
 	}
 }
 .button-white-popup {
@@ -166,18 +199,76 @@ body::after {
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	&_03 {
+		flex-direction: row;
+		& .popup__content {
+			padding: 0px 0px;
+		}
+	}
 }
 .popup__content {
-	
+	display: flex;
+	flex-direction: column;
+	background-color: #fff;
+	padding: 20px 30px;
+	min-width: 347px;
+	//grid-template-columns: auto 333px;
 	visibility: hidden;
 	transform: scale(0);
 	transition: transform 0.3s ease 0s;
-	background-color: #fff;
-	padding: 20px 30px;
-	width: 100%;
-	max-width: 347px;
+	@media (max-width:$mobile){
+		 display: block; 
+	}
 	border-radius: 16px;
 	.lock & {
 		visibility: visible;
+	}
+}
+
+.popup__content-03 {
+	display: grid;
+	grid-template-columns: auto 333px;
+	//visibility: hidden;
+	//transform: scale(0);
+	//transition: transform 0.3s ease 0s;
+	@media (max-width:$mobile){
+		display: block; 
+	}
+	border-radius: 16px;
+}
+
+.popup__left {
+	background-color: #fff;
+	padding: 20px 30px;
+	//width: 100%;
+	max-width: 347px;
+	border-radius: 16px 0 0 16px;
+	@media (max-width:$mobile){
+		border-radius: 16px; 
+	}
+}
+
+.right-popup {
+	border-radius: 0 16px 16px 0;
+	@media (max-width:$mobile){
+		 display: none; 
+	}
+	// .right-popup__top
+
+	&__top {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		margin: 26px 30px 50px 41px;
+	}
+
+	// .right-popup__img
+
+	&__img {
+	}
+
+	// .right-popup__bottom
+
+	&__bottom {
 	}
 }

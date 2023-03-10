@@ -350,7 +350,7 @@
 		//justify-content: center;
 		align-items: center;
 		flex-wrap: wrap;
-		@include adaptiveValue("column-gap", 40, 10,1920,375,1);
+		@include adaptiveValue("column-gap", 40, 20,1920,375,1);
 		row-gap: rem(10);
 		position: relative;
 		@media (max-width:$mobile){
@@ -456,6 +456,7 @@
 		@media (max-width:$mobile){
 			border-top: 1px solid #DBDBDB;
 			padding: 20px 0px;
+			padding-left: 33px;
 			&:first-of-type {
 				border-top: 0;
 			}

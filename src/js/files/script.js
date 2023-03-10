@@ -16,7 +16,6 @@ function documentActions(e) {
 		const subMenuId = targetElement.dataset.parent ? targetElement.dataset.parent : null;
 		const subMenu = document.querySelector(`[data-submenu="${subMenuId}"]`);
 		
-		console.log(subMenu);
 		if (subMenu) {
 			if (activeLink && activeLink !== targetElement) {
 				activeLink.classList.remove('_sub-menu-active');

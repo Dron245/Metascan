@@ -57,28 +57,43 @@
 </div>
 
 <div id="popup03" aria-hidden="true" class="popup">
-	<div class="popup__wrapper">
-		<div class="popup__content">
-			<div class="popup__top">
-				<div class="popup__title"><h3>Заказ звонка</h3></div>
-				<button data-close type="button" class="popup__close">
-				<img src="@img/header/popup_close.svg" alt="">
-			</button>
-			</div>
-			<div class="popup__search checkbox">
-				<form action="#" class="popup__form popup__form_02">
-					<input autocomplete="off" type="text" name="form[]" data-error="Ошибка" placeholder="Как вас зовут?" class="popup__input">
-					<input autocomplete="off" type="text" name="form[]" data-error="Ошибка" placeholder="+7" class="popup__input">
-					<div class="popup__check">
-						<input class="checkbox__input" value="Запомнить меня" type="checkbox" name="Запомнить меня" id="02">
-						<label class="checkbox__label" for="02">Запомнить меня</label>
+	<div class="popup__wrapper popup__wrapper_03">
+		<div class="popup__content popup__content-03">
+			<div class="popup__left">
+				<div class="popup__top">
+					<div class="popup__title"><h3>Заказ звонка</h3></div>
+				</div>
+				<div class="popup__search checkbox">
+					<form action="#" class="popup__form popup__form_02">
+						<div class="popup__input-group">
+							<span>Имя</span>
+							<input autocomplete="off" type="text" name="form[]" data-error="Ошибка" 
+							placeholder="Как вас зовут?" class="popup__input">
+						</div>
+						<div class="popup__input-group">
+							<span>Телефон</span>
+							<input autocomplete="off" type="text" name="form[]" data-error="Ошибка" 
+						placeholder="+7" class="popup__input">
+						</div>
+						<button class="popup__button button-black" type="button">Заказать звонок</button>
+					</form>
+					<div class="popup__bottom bottom-popup">
+						<p class="bottom-popup__politica">Нажимая на кнопку, вы соглашаетесь с <a class="" href="#">политикой конфиденциальности</a>
+						</p>
 					</div>
-					<button class="popup__button button-black" type="button">Войти</button>
-					<span class="popup__lose-pasword">Забыли пароль?</span>
-				</form>
-				<div class="popup__bottom bottom-popup">
-					<span class="bottom-popup__text">Ещё не зарегистрированы?</span>
-					<button type="button" class="button-white button-white-popup">Регистрация</button>
+				</div>
+			</div>
+			<div class="popup__right right-popup">
+				<div class="right-popup__top">
+					<div class="right-popup__img">
+						<img src="@img/header/logo.svg" alt="">
+					</div>
+					<button data-close type="button" class="popup__close">
+						<img src="@img/header/popup_close.svg" alt="">
+					</button>
+				</div>
+				<div class="right-popup__bottom">
+					<img src="@img/header/scan.png" alt="">
 				</div>
 			</div>
 		</div>
