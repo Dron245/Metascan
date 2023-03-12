@@ -193,7 +193,7 @@
 			left: -100%;
 			overflow: auto;
 			background: #F4F4F4;
-			padding: rem(150) rem(20) rem(50) rem(20);
+			padding: rem(80) rem(20) rem(50) rem(20);
 			transition: left 0.3s ease 0s;
 			z-index: 4;
 			&::before {
@@ -308,7 +308,8 @@
 		@media (max-width:$mobile){
 			box-shadow: inset 0px 4px 10px -4px rgb(0 0 0 / 10%);
 			 position: relative;
-			 z-index: 10;
+			 //z-index: 10;
+			 padding: 0px 0px;
 			 transition: background-color 0.3s;
 			 .menu-open & {
 				background-color: #f4f4f4;
@@ -330,6 +331,7 @@
 		@media (max-width:$mobile){
 			 justify-content: space-between;
 			 z-index: 10;
+			 margin-bottom: 20px;
 		}
 	}
 	// .header-bottom__navigation

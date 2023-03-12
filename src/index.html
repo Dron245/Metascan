@@ -7,6 +7,53 @@
 		<div class="wrapper">
 			@@include('html/_header.htm',{})
 			<main class="page">
+				<section class="page__main main">
+					<div class="main__container">
+						<div class="main__top">
+							<div class="main__content">
+								<h1 class="main__title">Откройте для <br>себя мир поиска и <br>безопасности </h1>
+								<p class="main__text">Все о компании «Метаскан» за одну минуту</p>
+								<button class="main__button button-black">
+									<span>Смотреть видео</span>
+									<img src="@img/main/arrow-right.svg" alt="">
+								</button>
+								<button class="main__pagination"></button>
+							</div>
+							<div class="main__video video-main">
+								<div class="video-main__slider">
+									<div class="video-main__swiper">
+										<div class="video-main__slide">
+											<iframe width="560" height="315" src="https://www.youtube.com/embed/WmBAUA96IWY" 
+											title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; 
+											encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+										</div>
+										<div class="video-main__slide">
+											<iframe width="560" height="315" src="https://www.youtube.com/embed/PXcuN3pbCLs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+										</div>
+										<div class="video-main__slide">
+											<iframe width="560" height="315" src="https://www.youtube.com/embed/JiHY50y7-vE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="main__bottom bottom-main">
+							<div class="bottom-main__slider">
+								<div class="bottom-main__swiper">
+									<div class="bottom-main__slide -ibg">
+										<img src="@img/main/01.jpg" alt="">
+									</div>
+									<div class="bottom-main__slide -ibg">
+										<img src="@img/main/02.jpg" alt="">
+									</div>
+									<div class="bottom-main__slide -ibg">
+										<img src="@img/main/03.jpg" alt="">
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
 			</main>
 			@@include('html/_footer.htm',{})
 		</div>
