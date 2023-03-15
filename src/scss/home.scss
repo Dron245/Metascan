@@ -400,6 +400,8 @@
 	// .bgr__slide
 
 	&__slide {
+		background-color: white;
+   	border-radius: 16px 16px 16px 16px;
 	}
 
 	// .bgr__controls
@@ -919,8 +921,11 @@
 .slide03 {
 }
 .controls-bgr {
-	display: flex;
-	justify-content: center;
+	display: none;
+	@media (max-width:$mobile){
+		display: flex;
+		justify-content: center; 
+	}
 	// .controls-bgr__arrows
 
 	&__arrows {
