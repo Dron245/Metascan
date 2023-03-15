@@ -2,6 +2,7 @@
 import { isMobile } from "./functions.js";
 // Подключение списка активных модулей
 import { flsModules } from "./modules.js";
+const linkA =document.querySelectorAll('a');
 
 document.addEventListener("click", documentActions);
 let citySelect = document.querySelector('.header-top__button_city')
@@ -64,5 +65,38 @@ function documentActions(e) {
 		});
 		targetElement.classList.add('_popup-city-select')
 		citySelect.innerHTML = targetElement.innerText
+	}
+
+	//квиз
+	const quiz01 = document.querySelector('.quiz01');
+	const quiz02 = document.querySelector('.quiz02');
+	const quiz03 = document.querySelector('.quiz03');
+	const quiz04 = document.querySelector('.quiz04');
+	if (targetElement.closest('.answers-quiz__item')) {
+		targetElement.classList.toggle('_active')
+	}
+	if (targetElement.closest('.further01') && quiz01.querySelector('._active')) {
+		//quiz01.classList.add('_close');
+		quiz02.classList.toggle('_open');
+		e.preventDefault();
+	}
+	if (targetElement.closest('.further02') && quiz02.querySelector('._active')) {
+		//quiz02.classList.add('_close');
+		//quiz02.classList.remove('_open');
+		quiz03.classList.toggle('_open');
+		e.preventDefault();
+	}
+	if (targetElement.closest('.further03') && quiz03.querySelector('._active')) {
+		//quiz03.classList.add('_close');
+		quiz04.classList.toggle('_open');
+		e.preventDefault();
+	}
+	if (targetElement.closest('.quiz__further_start')) {
+		const quiz =document.querySelectorAll('.quiz');
+		quiz.forEach(element => {
+			element.classList.remove('_open')
+		});
+		quiz01.classList.toggle('_open');
+		e.preventDefault();
 	}
 }

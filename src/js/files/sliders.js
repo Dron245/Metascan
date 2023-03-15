@@ -233,7 +233,12 @@ function initSliders() {
 			pagination: {
 				el: '.controls-bgr__pagination',
 				//clickable: true,
-				type:'fraction'
+				type:'fraction',
+				renderFraction: function (currentClass, totalClass, index, total) {
+					return '<span class="' + currentClass + '">0 '+ index +' </span>' +
+						 ' из ' +
+						 '<span class="' + totalClass + '">0 '+ total +' </span>';
+			  }
 			},
 			
 
