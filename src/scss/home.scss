@@ -55,7 +55,7 @@
 		background: rgb(255, 255, 255);
 		border-radius: 16px 0 0 16px;
 		//flex: 0 0 513px;
-		@include adaptiveValue("padding-left", 50, 20,1920,768,1);
+		@include adaptiveValue("padding-left", 50, 20,1558,768,1);
 		padding-right: 20px;
 		@media (max-width:$mobile){
 			flex-direction: column-reverse;
@@ -70,8 +70,8 @@
 	&__title {
 		font-weight: 500;
 		line-height: 1.25;
-		@include adaptiveValue("font-size", 45, 22,1920,768,1);
-		@include adaptiveValue("margin-top", 124, 5,1920,768,1);
+		@include adaptiveValue("font-size", 45, 22,1558,768,1);
+		@include adaptiveValue("margin-top", 124, 5,1558,768,1);
 		@media (max-width:$mobile){
 			 & br {
 				display: none;
@@ -83,7 +83,7 @@
 
 	&__text {
 		margin-top: rem(20);
-		@include adaptiveValue("font-size", 20,16,1920,768,1 );
+		@include adaptiveValue("font-size", 20,16,1558,768,1 );
 		line-height: 1.25;
 		@media (max-width:$mobile){
 			 margin-top: 10px; 
@@ -91,10 +91,10 @@
 	}
 
 	&__button {
-		@include adaptiveValue("margin-top", 60, 16,1920,768,1);
+		@include adaptiveValue("margin-top", 60, 16,1558,768,1);
 		display: flex;
 		align-items: center;
-		@include adaptiveValue("font-size", 18, 14,1920,768,1);
+		@include adaptiveValue("font-size", 18, 14,1558,768,1);
 		font-weight: 500;
 		line-height: math.div(21 , 18);
 		@media (max-width:$mobile){
@@ -109,8 +109,8 @@
 	}
 
 	&__pagination {
-		@include adaptiveValue("margin-top", 70, 30,1920,768,1);
-		@include adaptiveValue("margin-bottom",30 ,10,1920,768,1 );
+		@include adaptiveValue("margin-top", 70, 30,1558,768,1);
+		@include adaptiveValue("margin-bottom",30 ,10,1558,768,1 );
 		display: flex;
 		gap: rem(10);
 		@media (max-width:$mobile){
@@ -181,7 +181,7 @@
 	}
 }
 .bottom-main {
-	@include adaptiveValue("margin-top", 30, 20,1920,768,1);
+	@include adaptiveValue("margin-top", 30, 20,1558,768,1);
 	// .bottom-main__slider
 
 	&__slider {
@@ -196,7 +196,7 @@
 	// .bottom-main__slide
 
 	&__slide {
-		padding-bottom: percent(323,1520);
+		padding-bottom: percent(323,1558);
 		@media (max-width:$mobile){
 			  padding-bottom: 50.705%
 		}
@@ -211,7 +211,7 @@
 	// .page__ground
 
 	&__ground {
-		@include adaptiveValue("margin-top", 110,60,1920, 375,1);
+		@include adaptiveValue("margin-top", 110,60,1558, 375,1);
 	}
 }
 .ground {
@@ -243,7 +243,7 @@
 
 	&__item {
 		display: grid;
-		grid-template-columns: percent(780,1520) auto;
+		grid-template-columns: percent(780,1558) auto;
 		border-radius: 16px;
 		@media (max-width:$mobile){
 			display: block;
@@ -269,7 +269,7 @@
 		background-color: white;
 		padding-left: 50px;
 		padding-right: 5px;
-		@include adaptiveValue("padding-top", 96, 24,1920,768,1);
+		@include adaptiveValue("padding-top", 96, 24,1558,768,1);
 		@media (max-width:$mobile){
 			 border-radius: 0 0 16px 16px;
 			 padding-left:24px;
@@ -283,10 +283,10 @@
 	}
 
 	&__paragraph {
-		@include adaptiveValue("font-size", 26, 19,1920,768,1);
+		@include adaptiveValue("font-size", 26, 19,1558,768,1);
 		font-weight: 300;
 		line-height: 1.4;
-		@include adaptiveValue("margin-bottom", 30, 14,1920,768,1);
+		@include adaptiveValue("margin-bottom", 30, 14,1558,768,1);
 	}
 	// .top-ground__link
 
@@ -295,7 +295,7 @@
 		font-size: rem(16);
 		line-height: 1.4;
 		position: relative;
-		@include adaptiveValue("margin-bottom", 33, 16,1920,768,1);
+		@include adaptiveValue("margin-bottom", 33, 16,1558,768,1);
 		&::after{
 			content:'';
 			position: absolute;
@@ -338,6 +338,9 @@
 		grid-template-columns: repeat(auto-fill, minmax(335px, 493px));
 		justify-content: center;
 		gap: 20px;
+		@media (max-width: em(1045)){
+			grid-template-columns: repeat(2, minmax(335px, 493px));
+		}
 		@media (max-width:$mobile){
 			 display: flex;
 			 flex-direction: column; 
@@ -349,6 +352,9 @@
 	&__item {
 		border-radius: 16px;
 		align-self: flex-start;
+		@media (max-width: em(1558)){
+			align-self:stretch;
+		}
 		//padding-left: 5px;
 		//padding-right: 5px;
 		// .bgr__item_big
@@ -358,6 +364,9 @@
 			background: black;
 			align-self: flex-start;
 			height: 100%;
+			@media (max-width: em(1250)){
+				  grid-row-end: span 4;
+			}
 			@media (max-width:$mobile){
 				 width: 100%; 
 			}
@@ -381,7 +390,9 @@
 			position: relative;
 			@media (max-width:$mobile){
 				 height: 550px; 
+			//flex: 0 0 percent(546, 1447);
 			}
+			
 		}
 	}
 
@@ -421,7 +432,7 @@
 		padding: 0px 5px;
 		border-radius: 16px 16px 0 0;
 		@include adaptiveValue("padding-top", 50, 16,1550,768,1);
-		//@include adaptiveValue("margin-bottom", 39, -45,1920,375,1);
+		//@include adaptiveValue("margin-bottom", 39, -45,1558,375,1);
 		margin-bottom: 52px;
 		position: relative;
 		z-index: 2;
@@ -481,7 +492,7 @@
 	// .item-big-bgr__video
 
 	&__video {
-		//@include adaptiveValue("margin-top", 39, -20,1920,375,1);
+		//@include adaptiveValue("margin-top", 39, -20,1558,375,1);
 		position: relative;
 		padding-bottom: 64.505%;; /* задаёт высоту контейнера для 16:9 (если 4:3 — поставьте 75%) */
 		height: 0;
@@ -527,7 +538,7 @@
 		margin-top: 20px;
 		text-align: center;
 		font-weight: 500;
-		@include adaptiveValue("font-size", 28, 22,1920,768,1);
+		@include adaptiveValue("font-size", 28, 22,1558,768,1);
 		line-height: math.div(33 , 28);
 	}
 
@@ -538,7 +549,7 @@
 		text-align: center;
 		color: #666666;
 		font-weight: 300;
-		@include adaptiveValue("font-size", 16, 12,1920,768,1);
+		@include adaptiveValue("font-size", 16, 12,1558,768,1);
 		line-height: 1.5;
 		text-align: center;
 	}
@@ -565,7 +576,7 @@
 
 	&__cost {
 		font-weight: 700;
-		@include adaptiveValue("font-size", 22, 12,1920,768,1);
+		@include adaptiveValue("font-size", 22, 12,1558,768,1);
 		line-height: 1.5;
 	}
 
@@ -576,7 +587,7 @@
 		align-items: center;
 		gap: 10px;
 		white-space: nowrap;
-		@include adaptiveValue("font-size", 22, 12,1920,768,1);
+		@include adaptiveValue("font-size", 22, 12,1558,768,1);
 		&_quiz {
 			padding: 10px 12px;
 		}
@@ -608,7 +619,7 @@
 	left: 0;
 	width: 100%;
 	height: 100%;
-	@include adaptiveValue("padding", 36, 20,1520,375,1);
+	@include adaptiveValue("padding", 36, 20,1558,375,1);
 	@media (max-width:$mobile){
 		 padding-bottom: 0;
 		 border-radius: 16px 16px 0 0; 
@@ -618,8 +629,8 @@
 	&__title {
 		font-weight: 500;
 		color: white;
-		@include adaptiveValue("font-size", 34, 24,1520,375,1);
-		@include adaptiveValue("line-height", 40, 28,1520,375,1);
+		@include adaptiveValue("font-size", 34, 24,1558,375,1);
+		@include adaptiveValue("line-height", 40, 28,1558,375,1);
 	}
 
 	// .quiz__text
@@ -628,7 +639,7 @@
 		margin-top: 12px;
 		color: white;
 		line-height: 1.5;
-		@include adaptiveValue("font-size", 18, 15,1520,375,1);
+		@include adaptiveValue("font-size", 18, 15,1558,375,1);
 	}
 
 	// .quiz__top
@@ -649,7 +660,7 @@
 	&__question {
 		color: white;
 		font-weight: 700;
-		@include adaptiveValue("font-size", 22, 19,1520,375,1);
+		@include adaptiveValue("font-size", 22, 19,1558,375,1);
 		line-height: 1.5;
 	}
 
@@ -671,7 +682,7 @@
 	&__answers {
 		display: grid;
 		grid-template-columns: 1fr 1fr;
-		gap: 22px;
+		@include adaptiveValue("gap", 22, 10,1520,375,1);
 		&_row {
 			grid-template-columns: 1fr;
 		}
@@ -692,7 +703,7 @@
 		@media (max-width:$mobile){
 			 padding: 10px 0px; 
 		}
-		@include adaptiveValue("margin-top",60 ,50,1520,768,1 );
+		@include adaptiveValue("margin-top",60 ,50,1558,768,1 );
 		img {
 			align-self: center;
 		}
@@ -728,7 +739,7 @@
 		@media (max-width:$mobile){
 			 padding-left: 5px; 
 		}
-		@include adaptiveValue("gap", 20, 10,1520,768,1);
+		@include adaptiveValue("gap", 20, 10,1558,768,1);
 	}
 }
 .quiz01 {
@@ -751,6 +762,7 @@
 		align-items: center;
 		padding: 12px 12.5px;
 		gap: 16px;
+		@include adaptiveValue("gap", 16, 8,1520,375,1);
 		pointer-events: auto;
 		&._active {
 			outline: 2px solid #FFCD11;
@@ -766,9 +778,15 @@
 	// .answers-quiz__img
 
 	&__img {
-		height: 100%;
+		flex: 0 0 36.68%;
+		padding-bottom: 36.68%;
+		//height: 100%;
 		display: flex;
 		align-items: center;
+		@media (max-width:$mobile){
+			 width: 54.4%;
+			 padding-bottom: 54.45%;
+		}
 	}
 
 	// .answers-quiz__text
@@ -776,7 +794,7 @@
 	&__text {
 		font-weight: 500;
 		line-height: 1.5;
-		font-size: rem(16);
+		@include adaptiveValue("font-size", 16, 16);
 		color: white;
 	}
 }
@@ -867,9 +885,9 @@
 	// .item-small-bgr__text
 
 	&__text {
-		@include adaptiveValue("margin-top", 12, 19,1920,375,1);
+		@include adaptiveValue("margin-top", 12, 19,1558,375,1);
 		font-weight: 300;
-		@include adaptiveValue("font-size", 16, 13,1920,768,1);
+		@include adaptiveValue("font-size", 16, 13,1558,768,1);
 		line-height: 1.5;
 		text-align: center;
 	}
@@ -910,7 +928,7 @@
 		margin-top: 161px;
 		margin-bottom: 18px;
 		font-weight: 500;
-		@include adaptiveValue("font-size", 18, 16,1920,375,1);
+		@include adaptiveValue("font-size", 18, 16,1558,375,1);
 		line-height: math.div(21 , 18);
 		padding: 17.5px 30px;
 	}
